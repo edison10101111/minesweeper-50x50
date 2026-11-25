@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>50×50 踩地雷</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>50×50 踩地雷</h1>
+      <div class="toolbar">
+        <div class="stat" title="剩餘地雷（含誤標）">
+          <span class="stat-label">地雷</span>
+          <span id="mine-count" class="stat-value">375</span>
+        </div>
+        <button type="button" id="new-game" class="btn-new" title="重新開始">🙂</button>
+        <div class="stat">
+          <span class="stat-label">時間</span>
+          <span id="timer" class="stat-value">000</span>
+        </div>
+      </div>
+      <p class="hint">左鍵開格 · 右鍵插旗 · 數字上雙擊或中鍵 chord 開鄰格</p>
+    </header>
+    <main class="board-wrap">
+      <div id="board" class="board" role="grid" aria-label="50 乘 50 踩地雷棋盤"></div>
+    </main>
+    <div id="overlay" class="overlay hidden" aria-live="polite">
+      <div class="overlay-card">
+        <p id="overlay-msg"></p>
+        <button type="button" id="overlay-restart" class="btn-primary">再玩一局</button>
+      </div>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
